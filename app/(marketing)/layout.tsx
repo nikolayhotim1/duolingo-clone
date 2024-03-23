@@ -1,11 +1,11 @@
 import { Footer } from './footer'
 import { Header } from './header'
 
-interface MarketingLayoutProps {
+export default function MarketingLayout({
+	children
+}: {
 	children: React.ReactNode
-}
-
-export default function MarketingLayout({ children }: MarketingLayoutProps) {
+}) {
 	return (
 		<div className='min-h-screen flex flex-col'>
 			<Header />{' '}
