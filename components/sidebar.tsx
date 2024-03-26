@@ -34,11 +34,11 @@ export function Sidebar({ className }: { className?: string }) {
 					iconSrc='/leaderboard.svg'
 				/>
 				<SidebarItem
-					label='quests'
+					label='Quests'
 					href='/quests'
 					iconSrc='/quests.svg'
 				/>
-				<SidebarItem label='shop' href='/shop' iconSrc='/shop.svg' />
+				<SidebarItem label='Shop' href='/shop' iconSrc='/shop.svg' />
 			</div>
 			<div className='p-4'>
 				<ClerkLoading>
