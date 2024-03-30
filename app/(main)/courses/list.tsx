@@ -24,7 +24,7 @@ export function List({ courses, activeCourseId }: ListProps) {
 		}
 		startTransition(() => {
 			upsertUserProgress(id).catch(() =>
-				toast.error('Something went wrong.')
+				toast.error('Something went wrong')
 			)
 		})
 	}

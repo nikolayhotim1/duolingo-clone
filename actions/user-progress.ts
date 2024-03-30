@@ -14,7 +14,7 @@ import {
 import { challengeProgress, challenges, userProgress } from '@/db/schema'
 
 export async function upsertUserProgress(courseId: number) {
-	const { userId } = await auth()
+	const { userId } = auth()
 	const user = await currentUser()
 	if (!userId || !user) {
 		throw new Error('Unauthorized')
@@ -88,7 +88,6 @@ export async function reduceHearts(challengeId: number) {
 			hearts: Math.max(currentUserProgress.hearts - 1, 0)
 		})
 		.where(eq(userProgress.userId, userId))
-
 	revalidatePath('/shop')
 	revalidatePath('/learn')
 	revalidatePath('/quests')
@@ -114,7 +113,6 @@ export async function refillHearts() {
 			points: currentUserProgress.points - POINTS_TO_REFILL
 		})
 		.where(eq(userProgress.userId, currentUserProgress.userId))
-
 	revalidatePath('/shop')
 	revalidatePath('/learn')
 	revalidatePath('/quests')
