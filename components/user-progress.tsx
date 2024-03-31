@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { InfinityIcon } from 'lucide-react'
-// import { courses } from '@/db/schema'
+import { courses } from '@/db/schema'
 import { Button } from '@/components/ui/button'
 
 export function UserProgress({
@@ -10,7 +10,7 @@ export function UserProgress({
 	hearts,
 	hasActiveSubscription
 }: {
-	activeCourse: any
+	activeCourse: typeof courses.$inferSelect
 	hearts: number
 	points: number
 	hasActiveSubscription: boolean
